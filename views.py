@@ -5,10 +5,10 @@ menu = [{"item":"მთავარი", "href":"home","id":1},
 
 # Create your views here.
 def index(request):
-    
-    return render(request, 'main/index.html' ,{'menu':menu, "id":1})
+    id = menu[0]["id"]
+    return render(request, 'main/index.html' ,{'menu':menu, "id":id})
 
 def contact(request):
-    
-    return render(request, 'main/contact.html' ,{'menu':menu,"id":2})
+    id = menu[1]["id"]
+    return render(request, 'main/contact.html' ,{'menu':menu,"id":id})
     
