@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.9.4/css/uikit-core-rtl.css" integrity="sha512-LDw+g5uVNiZ+maqH5lWA5zzGWnGSxeRSBjLREULQhujcI0R5J+XOFpimznT9Lidx54xkPsOfd2z0uNO8oAYeKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.9.4/js/uikit.min.js" integrity="sha512-HrOabH0q8HnOwCVtR2lvwgRYoHtI0V2zC0ii6Kt0xfKDWhvNrTM3TqQv4EIYjt5NlyowqHhjBJ2gheJ/BfoPnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.9.4/js/uikit-icons.js" integrity="sha512-xQ5vw/InV742NTAU97otVreEEePjRRCjN1W9/VG3MtlKWsRZmI3wKVbUt4qHJX2n2L87FWhJRDhPoPcX+ovtUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
      
@@ -18,7 +18,17 @@
     </head>
 <body>
     {% block navbar %}
-        
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
+            <div class="uk-navbar-left">
+               {% for it in menu %}
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="{% url it.href %}">{{it.item}} {{it.id}}</a></li>
+                </ul>
+                {% endfor %}
+            </div>
+        </nav>
+    </div>
     {% endblock navbar %}
     {% block header %}
 
