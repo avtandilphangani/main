@@ -39,7 +39,7 @@ body {
     
 }
 
-.uk-navbar-nav > li > a {
+.uk-navbar-nav > li > a, .uk-logo, .uk-button {
     font-family: 'BPG LE Studio 04 Caps';
   }
  
