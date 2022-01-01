@@ -34,7 +34,7 @@
                 <ul class="uk-navbar-nav">
                     {% for it in menu %}
                     <li {% if forloop.counter == id %}class="uk-active"{% endif %}>
-                        <a href="{% url it.href %}">{{it.item}} </a></li>
+                        <a href="{% url it.mslug %}">{{it.menuitem}} </a></li>
                         {% endfor %}    
                 </ul>
                 
@@ -45,7 +45,7 @@
     {% block header %}{% endblock header %}
     <hr class="uk-divider-icon">
     {% block sidebar %}{% endblock sidebar %}
-    <section id="countdown" class="uk-align-right"  >
+    <div id="countdown" class=" uk-navbar"  >
     <div class="uk-grid-small uk-child-width-auto uk-margin" uk-grid uk-countdown="date: 2021-12-31T20:59:00+00:00">
         <div>
             <div class="uk-countdown-number uk-countdown-days"></div>
@@ -66,7 +66,7 @@
             <div class="uk-countdown-number uk-countdown-seconds"></div>
             <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">წამი</div>
         </div>
-</section>
+    </div>
     
 </body>
 </html>
