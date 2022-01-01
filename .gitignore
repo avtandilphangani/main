@@ -1,3 +1,7 @@
+# პროექტის სტატიკური ფაილები
+statsic/img
+templates/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
