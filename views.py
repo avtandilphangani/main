@@ -1,7 +1,10 @@
 from django.shortcuts import render
 
-menu = [{"item":"მთავარი", "href":"home","id":1},
-        {"item":"კონტაქტი", "href":"contact","id":2}]
+from main.models import MainMenu
+
+'''menu = [{"item":"მთავარი", "href":"home","id":1},
+        {"item":"კონტაქტი", "href":"contact","id":2}]'''
+menu = MainMenu.objects.all()
 
 slides = [ {"img":"photo.jpg", "dark":"uk-light", "title":"თანამედროვე სახლის მოდელი", "button":"შეიტყვე მეტი", "text":"ძალიან ლამაზი ფოტოა, ხოლო ტექსტი ანიმირდება სურათთან ერთად"},
          {"img":"light.jpg", "dark":"uk-dark", "title":"ნათელი ფერების დიდზაინი","button":"ფერების შესახებ", "text":"ტექსტი ანიმრდება და მოცემულია შრიფტით გლახო"},
@@ -12,7 +15,7 @@ def index(request):
     
     context = {'menu':menu,
                'slides':slides,
-               'id':menu[0]["id"]
+               'id':0
             
     }
     return render(request, 'main/index.html' ,context=context)
@@ -20,8 +23,9 @@ def index(request):
 def contact(request):
     context = {'menu':menu,
                
-               'id':menu[1]["id"]
+               'id':1
     }
     return render(request, 'main/contact.html' ,context=context)
 
-    
+def gallery(request):
+    return render(request, 'main/contact.html')
