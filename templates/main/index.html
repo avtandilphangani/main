@@ -5,27 +5,6 @@
 
 
 {% block header %}
-<<<<<<< HEAD
-<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
-
-    <ul class="uk-slideshow-items">
-        <li>
-            <img src="{% static 'main/img/photo.jpg' %}" alt="" >
-        </li>
-        <li>
-            <img src="{% static 'main/img/light.jpg' %}" alt="" >
-        </li>
-        <li>
-            <img src="{% static 'main/img/dark.jpg' %}" alt="" >
-        </li>
-    </ul>
-
-    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-
-</div>
-    
-=======
 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="autoplay: true; animation: fade; min-height: 300; max-height: 600">
     <ul class="uk-slideshow-items" >
         {% for slide in slides %}
@@ -44,5 +23,4 @@
     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 </div>
->>>>>>> b9eab1ab05b1efcd6b6bdb5693e9b8a6d9277f46
 {% endblock header %}
