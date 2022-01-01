@@ -1,9 +1,27 @@
 {% extends 'main/layout.html' %}
-
+{% load static %}
 {% block page_title %}მთავარი გვერდი{% endblock page_title %}
 
 
 
 {% block header %}
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="{% static 'main/img/photo.jpg' %}" alt="" >
+        </li>
+        <li>
+            <img src="{% static 'main/img/light.jpg' %}" alt="" >
+        </li>
+        <li>
+            <img src="{% static 'main/img/dark.jpg' %}" alt="" >
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
     
 {% endblock header %}
