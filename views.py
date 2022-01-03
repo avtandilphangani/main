@@ -15,7 +15,7 @@ def index(request):
     
     context = {'menu':menu,
                'slides':slides,
-               'id':0
+               'id':1
             
     }
     return render(request, 'main/index.html' ,context=context)
@@ -23,7 +23,7 @@ def index(request):
 def contact(request):
     context = {'menu':menu,
                
-               'id':1
+               'id':2
     }
     return render(request, 'main/contact.html' ,context=context)
 
