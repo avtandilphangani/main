@@ -1,9 +1,0 @@
-#!/bin/bash
-rm -R /usr/share/nginx/static
-cp -r /home/avto/web/www/static /usr/share/nginx/
-chown www-data:www-data /usr/share/nginx/static
-chown -R www-data:www-data /usr/share/nginx/static/
-find /usr/share/nginx/static -type d -exec chmod 755 {} \; -print
-find /usr/share/nginx/static -type f -exec chmod 644 {} \; -print
-systemctl restart gunicorn
-service nginx reload
