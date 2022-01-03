@@ -1,6 +1,6 @@
 # პროექტის სტატიკური ფაილები
 statsic/img
-templates/
+templates/main
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
